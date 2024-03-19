@@ -29,36 +29,36 @@ const STATUS_MAP = {
 
 var statusOne = document.querySelector('#book1 .status');
 var statusOneValue = statusOne.textContent.trim();
-// reserve = selector(reserve)
-// checkout = selector(checkout)
-// checkin = selector(checkin)
+var reserveOne = document.querySelector('#book1 .reserve');
+var checkoutOne = document.querySelector('#book1 .checkout')
+var checkinOne = document.querySelector('#book1 .checkin')
 
 var statusTwo = document.querySelector('#book2 .status');
 var statusTwoValue = statusTwo.textContent.trim();
-// reserve = selector(reserve)
-// checkout = selector(checkout)
-// checkin = selector(checkin)
+var reserveTwo = document.querySelector('#book2 .reserve');
+var checkoutTwo = document.querySelector('#book2 .checkout');
+var checkinTwo = document.querySelector('#book2 .checkin');
 
 var statusThree = document.querySelector('#book3 .status');
 var statusThreeValue = statusThree.textContent.trim();
-// reserve = selector(reserve)
-// checkout = selector(checkout)
-// checkin = selector(checkin)
+var reserveThree = document.querySelector('#book3 .reserve');
+var checkoutThree = document.querySelector('#book3 .checkout');
+var checkinThree = document.querySelector('#book3 .checkin');
 
-// checkin.0.color = none
+checkinOne.style.color = 'black';
 statusOne.style.color = STATUS_MAP[statusOneValue].color;
-// reserve.0 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-// checkout.0 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-// checkin.0 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+reserveOne.disabled = !STATUS_MAP[statusOneValue].canReserve;
+checkoutOne.disabled = !STATUS_MAP[statusOneValue].canCheckout;
+checkinOne.disabled = !STATUS_MAP[statusOneValue].canCheckIn;
 
+checkinTwo.style.color = 'black';
 statusTwo.style.color = STATUS_MAP[statusTwoValue].color;
-// status.1.style.color = STATUS_MAP.status.color
-// reserve.1 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-// checkout.1 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-// checkin.1 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+reserveTwo.disabled = !STATUS_MAP[statusTwoValue].canReserve;
+checkoutTwo.disabled = !STATUS_MAP[statusTwoValue].canCheckout;
+checkinTwo.disabled = !STATUS_MAP[statusTwoValue].canCheckIn;
 
-// checkin.2.color = none
+checkinThree.style.color = 'black';
 statusThree.style.color = STATUS_MAP[statusThreeValue].color;
-// reserve.2 = STATUS_MAP.status.canReserver ? 'enabled' : 'disabled'
-// checkout.2 = STATUS_MAP.status.canCheckout ? 'enabled' : 'disabled'
-// checkin.2 = STATUS_MAP.status.canCheckIn ? 'enabled' : 'disabled'
+reserveThree.disabled = !STATUS_MAP[statusTwoValue].canReserve;
+checkoutThree.disabled = !STATUS_MAP[statusThreeValue].canCheckout;
+checkinThree.disabled = !STATUS_MAP[statusThreeValue].canCheckIn;

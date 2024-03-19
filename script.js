@@ -45,20 +45,20 @@ var reserveThree = document.querySelector('#book3 .reserve');
 var checkoutThree = document.querySelector('#book3 .checkout');
 var checkinThree = document.querySelector('#book3 .checkin');
 
-checkinOne.style.color = 'black';
+checkinOne.style.color = '';
 statusOne.style.color = STATUS_MAP[statusOneValue].color;
 reserveOne.disabled = !STATUS_MAP[statusOneValue].canReserve;
 checkoutOne.disabled = !STATUS_MAP[statusOneValue].canCheckout;
 checkinOne.disabled = !STATUS_MAP[statusOneValue].canCheckIn;
 
-checkinTwo.style.color = 'black';
+checkinTwo.style.color = '';
 statusTwo.style.color = STATUS_MAP[statusTwoValue].color;
 reserveTwo.disabled = !STATUS_MAP[statusTwoValue].canReserve;
 checkoutTwo.disabled = !STATUS_MAP[statusTwoValue].canCheckout;
 checkinTwo.disabled = !STATUS_MAP[statusTwoValue].canCheckIn;
 
-checkinThree.style.color = 'black';
+checkinThree.style.color = '';
 statusThree.style.color = STATUS_MAP[statusThreeValue].color;
-reserveThree.disabled = !STATUS_MAP[statusTwoValue].canReserve;
+reserveThree.disabled = !STATUS_MAP[statusThreeValue].canReserve;
 checkoutThree.disabled = !STATUS_MAP[statusThreeValue].canCheckout;
 checkinThree.disabled = !STATUS_MAP[statusThreeValue].canCheckIn;
